@@ -1,0 +1,124 @@
+/* Reset de algumas propriedades do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #ff6ec7, #ff9a8b);
+    color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+main {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    width: 80%;
+    max-width: 1200px;
+    padding: 40px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+b {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+input[type="number"],
+input[type="text"],
+textarea,
+input[type="file"] {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 2px solid #ff6ec7;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+textarea {
+    resize: vertical;
+    height: 120px;
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-top: 20px;
+    background: #af214b; /* Rosa claro */
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover {
+    background-color: #ff6ec7;
+}
+
+p {
+    font-size: 20px;
+    color: #ff9a8b;
+    text-align: center;
+    margin-top: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    input[type="number"],
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+        width: 90%;
+    }
+
+    input[type="submit"],
+    input[type="reset"],
+    input[type="button"] {
+        width: 90%;
+        font-size: 16px;
+    }
+}

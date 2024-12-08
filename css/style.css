@@ -1,0 +1,125 @@
+/* Reset de algumas propriedades do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(45deg, #ff6ec7, #ff9a8b);
+    color: white;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+main {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+    width: 80%;
+    max-width: 1200px;
+    padding: 40px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    color: #f0f0f0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+a {
+    font-size: 20px;
+    color: #ff9a8b;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 40px;
+}
+
+table th,
+table td {
+    padding: 20px;
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid #ff6ec7;
+    color: #ff9a8b;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
+}
+
+table th {
+    font-size: 22px;
+    background: linear-gradient(45deg, #ff6ec7, #ff9a8b);
+    color: white;
+    text-transform: uppercase;
+}
+
+table td {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+table tr:nth-child(even) td {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+table tr:hover td {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+table td img {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+
+
+p {
+    font-size: 20px;
+    color: #ff9a8b;
+    text-align: center;
+    margin-top: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 20px;
+    }
+
+    table th, table td {
+        font-size: 16px;
+        padding: 15px;
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+
+    a {
+        font-size: 18px;
+    }
+}
