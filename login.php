@@ -1,13 +1,12 @@
 <?php
 session_start();
 
-// Verifica se os dados de login foram enviados
+
 if (isset($_POST['username'], $_POST['senha'])) {
-    // Usuário fixo para login (pode ser substituído por banco de dados)
+
     $username = $_POST['username'];
     $senha = $_POST['senha'];
 
-    // Autenticação simples
     if ($username === 'admin' && $senha === 'admin') {
         $_SESSION['logado'] = true;
         $_SESSION['funcao'] = 'admin';
@@ -16,7 +15,6 @@ if (isset($_POST['username'], $_POST['senha'])) {
         $_SESSION['funcao'] = 'convidado';
     }
 
-    // Redireciona para a página inicial
     header("Location: index.php");
     exit();
 }

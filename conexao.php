@@ -1,6 +1,6 @@
 <?php
 class BancodeDados {
-    // Nas linhas abaixo voc� poder� colocar as informa��es do Banco de Dados.
+  
     private $host = "localhost"; 	// Nome ou IP do Servidor
     private $user = "root"; 		// Usu�rio do Servidor MySQL
     private $senha = "01122005Batata@"; 		// Senha do Usu�rio MySQL

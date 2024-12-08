@@ -1,18 +1,16 @@
 <?php
 session_start();
 
-// Verifica se o usuário está logado, caso contrário, redireciona ao login
+
 if (!isset($_SESSION['logado'])) {
     header("Location: login.php");
     exit();
 }
 
-// Define o papel do usuário (admin ou guest)
 $role = $_SESSION['funcao'] ?? 'convidado';
 
 include_once('conexao.php');
 
-// Criando o objeto MySQL e conectando ao banco de dados
 $mysql = new BancodeDados();
 $mysql->conecta();
 ?>
@@ -28,8 +26,7 @@ $mysql->conecta();
 <body>
     <main>
         <h3>Galeria de Fotos</h3>
-        
-        <!-- Exibir opções baseadas no papel -->
+       
         <?php if ($role === 'admin'): ?>
             <a href='inclusao.php'>Enviar Foto</a><br><br>
         <?php endif; ?>
@@ -41,13 +38,12 @@ $mysql->conecta();
         ini_set('display_startup_errors', 1);
         error_reporting(E_ALL);
 
-        // Definindo a consulta SQL
         $sql = "SELECT codigo, nomeFoto FROM tabelaimg";
 
-        // Executa a consulta e obtém o result set
+
         $result = $mysql->sqlquery($sql, "index.php");
 
-        // Verifica e exibe os dados na tabela
+        
         if (mysqli_num_rows($result) > 0) {
             echo "<table border='1'>
                     <tr>
